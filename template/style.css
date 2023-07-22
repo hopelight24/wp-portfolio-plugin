@@ -1,0 +1,292 @@
+@import 'https://fonts.googleapis.com/css?family=Lato|Roboto+Slab:700';
+
+
+.portfolio-wrap {
+  width: 100%;
+  max-width: 1200px !important;
+}
+
+.gallery-wrap,
+#gallery {
+  overflow: hidden;
+}
+
+.popup-project-categoty {
+  color: #8b8b8b;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.popup-project-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.w3-col.m4.s12.w3-center img {
+  max-width: 100%;
+}
+
+#filters {
+  margin: 1%;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  overflow: hidden;
+}
+
+#filters li {
+  display: inline-block;
+}
+
+#filters li span {
+  display: block;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #666;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.25s;
+}
+
+#filters li:hover span {
+  color: #000;
+}
+
+.w3-col.m4.s12.w3-center {
+  text-align: center;
+}
+
+.portfolio-wrap .inside img {
+  max-height: 360px;
+  min-height: 360px;
+}
+
+#filters li span.active {
+  background: #4610b1;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.portfolio-wrap .inside h6,
+.portfolio-wrap .inside p {
+  margin: 0;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.portfolio-wrap .inside h6 {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.gallery-item {
+  float: left;
+  width: 31%;
+  padding: 10px;
+  position: relative;
+  z-index: 10;
+  display: none;
+}
+
+.inside {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-wrap .inside {
+  color: #fff;
+}
+
+.details,
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+
+  h2 {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0;
+  }
+
+  p {
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+.inside img {
+  float: left;
+  width: 100%;
+}
+.project__images img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.project__images {
+  text-align: center;
+}
+.portfoli-buttons a {
+  color: #fff;
+  background: purple;
+  padding: 10px 35px;
+  line-height: 1;
+  display: block;
+  margin: 0 !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 45px;
+  text-align: center;
+}
+.portfoli-buttons {
+  display: flex;
+  padding-right: 52px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+.portfoli-buttons a:hover{opacity: .75;}
+
+.overlay {
+  background: rgb(70 53 207 / 80%);
+  z-index: 1;
+  transition: all 0.7s ease-in-out;
+}
+
+.gallery-item:hover .details,
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+@media (max-width: 30em) {
+  .wrap {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .gallery-item {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media(max-width:1200px) {
+  .popup-inner {
+    width: 80%;
+  }
+
+  .w3-col.m4.s12.w3-center img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .portfolio-wrap .inside img {
+    max-height: 300px;
+    min-height: auto;
+  }
+}
+
+
+@media(max-width:991px) {
+  .portfolio-wrap .inside h6 {
+    font-size: 20px;
+  }
+
+  .popup-project-title {
+    font-size: 22px;
+  }
+
+  .popup-project-categoty {
+    font-size: 13px;
+  }
+
+  .w3-col.m8.s12 p {
+    font-size: 14px;
+  }
+  .project__images img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+}
+
+
+
+
+
+
+
+
+.popup {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  max-width: 100% !important;
+  z-index: 555;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+
+/* Inner */
+.popup-inner {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 950px;
+  position: relative;
+  border-radius: 3px;
+  background: #fff;
+}
+
+/* Close Button */
+
+.popup-close {
+  width: 45px;
+  height: 45px;
+  padding-top: 4px;
+  position: absolute;
+  top: 0.5em;
+  right: 1rem;
+  transition: ease 0.25s all;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  text-align: center;
+  color: #fff !important;
+  z-index: 55;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+.popup-inner .responseContent {
+  height: 75vh;
+  overflow-y: scroll;
+}
+
+.popup-close:hover {
+  -webkit-transform: translate(50%, -50%) rotate(180deg);
+  transform: translate(0, 0) rotate(180deg);
+  background: rgba(0, 0, 0, 1);
+  text-decoration: none;
+}
