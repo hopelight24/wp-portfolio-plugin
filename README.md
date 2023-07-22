@@ -3,4 +3,4 @@ Wordpress Simple  Portfolio
 Shortcode <br>
 [wppool-projects]
 
-or  you will get this in Settings > Simple Portfoli  menu
+or  you will get this in Settings > Simple Portfolio   menu
